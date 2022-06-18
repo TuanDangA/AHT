@@ -1,0 +1,212 @@
+.cover {
+    position: fixed;
+    width: 100vw;
+    height: 100vw;
+    background-color: #222;
+    opacity: 0;
+    z-index: -1;
+}
+.cover.active {
+    opacity: 0.9;
+    z-index: 100;
+    .transit(all, .5s);
+}
+.header {
+    font-size: 12px;
+    .logo-mobile {
+        text-align: center;
+        display: none;
+    }
+    &-top {
+        padding: 18px 0;
+        box-sizing: border-box;
+        background-color: @bg-header;
+        font-weight: 500;
+        color: @mini-title-color;
+        height: 68px;
+        &-inner {
+            .flex();
+            .web-info {
+                display: flex;
+                &-button {
+                    align-items: center;
+                    margin-right: 22px;
+                    display: flex;
+                    .info-icon {
+                        margin-right: 10px;
+                        height: 30px;
+                        width: 30px;
+                        line-height: 30px;
+                        text-align: center;
+                        border: 1px solid @border-color;
+                        color: @main-color;
+                    }
+                    .info-content {
+                        .title {
+
+                        }
+                        .description {
+                            a {
+                                letter-spacing: 0.01em;
+                                color: @text-white-color;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .sl-language {
+            img {
+                width: 17px; 
+                vertical-align: middle;
+                padding-right: 10px;
+            }
+            a {
+                color: @text-white-color;
+            }
+        }
+    }
+    &-bottom {
+        padding-top: 25px;
+        padding-bottom: 21px;
+        &-inner {
+            .flex();
+            .form-control {
+                display: flex;
+                align-items: center;
+                margin-bottom: 3px;
+                .search{
+                    width: 556px;
+                    form {
+                        height: 38px;
+                        border: 1px solid @title-bg-color;
+                        display: flex;
+                        // bo tròn viền(=height của item) + ẩn phần ko đc bo tròn
+                        border-radius: 40px;
+                        overflow: hidden;
+                        .search-s1 {
+                            line-height: 38px;
+                            padding-left: 22px;
+                            padding-right: 35px;
+                            select {
+                                height: 24px;
+                                border: none;
+                                .appearance(none);
+                                background-image: url('../img/caret-down.png');
+                                background-repeat: no-repeat;
+                                background-position-x: right;
+                                background-position-y: center;
+                                padding-right: 25px;
+                            }
+                        }
+                        .search-input {
+                            flex:1;
+                            line-height: 38px;
+                            input {
+                                border: none;
+                                width: 100%;
+                                height: 24px;
+                                border-left: 1px solid @title-bg-color;
+                                padding-left: 19px;
+                            }
+                        }
+                        .search-button {
+                            button {
+                                border: none;
+                                background-color: @main-color;
+                                color: @text-white-color;
+                                font-size: 18px;
+                                height: 38px;
+                                line-height: 38px;
+                                width: 57px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+                .control-item {
+                    color: @main-color;
+                    font-size: 26px;
+                    margin-left: 19px;
+                }
+                .cart {
+                    padding-right: 7px;
+                    position: relative;
+                    &::after {
+                        font-size: 10px;
+                        color: @text-white-color;
+                        //nếu ko để display block thì ko căn đc width-height
+                        display: block;
+                        width: 15px;
+                        height: 15px;
+                        line-height: 15px;
+                        text-align: center;
+                        border-radius: 15px;
+                        background-color: @bg-header;
+                        //lấy giá trị của attribute có tên là data(2) đã được định nghĩa trước đó trong thẻ
+                        content: attr(data);
+                        position: absolute;
+                        top: 3px;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menu-bar {
+    padding: 14px 0;
+    background-color: @main-color;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    &-inner {
+        .flex();
+        .menu-category {
+            text-transform: uppercase;
+            i {
+                padding-right: 15px;
+                font-size: 22px;
+                vertical-align: bottom;
+            }
+        }
+        nav {
+            .nav-icon {
+                display: none;
+                font-size: 14px;
+                text-transform: uppercase;
+                i {
+                    font-size: 22;
+                    vertical-align: middle;
+                    padding-left: 15px;
+                }
+            }
+            .navbar {
+                .nav-title {
+                    display: none;
+                    background-color: @main-color;
+                    color: @text-white-color;
+                    line-height: 51px;
+                    text-transform: uppercase;
+                    font-size: 24px;
+                    font-weight: 600;
+                    padding: 0 15px;
+                }
+                .nav-item {
+                    margin-left: 27px;
+                    margin-right: 28px;
+                    display: inline-block;
+                    a {
+                        text-transform: uppercase;
+                        color: #fff;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

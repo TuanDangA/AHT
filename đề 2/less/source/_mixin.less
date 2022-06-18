@@ -1,0 +1,39 @@
+//flexbox
+.flex(){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+//select (làm mũi tên xuống của thẻ select biến mất)
+.appearance (@canet) {
+    appearance: @canet;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+//thay đổi kích cỡ/biến đổi hình dạng thẻ
+.transformer (@scale) {
+    transform: @scale;
+    -webkit-transform: @scale;
+    -moz-transform: @scale;
+    -ms-transform: @scale;
+    -o-transform: @scale;
+}
+
+//quy định thời gian + chọn những thuộc tính mới
+.transit (@attr, @sec) {
+    transition: @attr, @sec;
+    -webkit-transition: @attr, @sec;
+    -moz-transition: @attr, @sec;
+    -ms-transition: @attr, @sec;
+    -o-transition: @attr, @sec;
+}
+
+//quy định width của các col trong div row
+.col(@width) {
+    width: @width;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin: 15px 0;
+}
