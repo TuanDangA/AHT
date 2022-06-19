@@ -23,7 +23,7 @@
         background-color: @bg-header;
         font-weight: 500;
         color: @mini-title-color;
-        height: 68px;
+        height: 71px;
         &-inner {
             .flex();
             .web-info {
@@ -42,14 +42,17 @@
                         color: @main-color;
                     }
                     .info-content {
-                        .title {
+                        line-height: 18px;
+                        font-size: 12px;
+                        font-weight: 500;
 
+                        .title {
+                            color: @mini-title-color;
                         }
                         .description {
                             a {
-                                letter-spacing: 0.01em;
+                                // letter-spacing: 0.01em;
                                 color: @text-white-color;
-                                font-weight: 400;
                             }
                         }
                     }
@@ -57,6 +60,7 @@
             }
         }
         .sl-language {
+            margin-right: 16px;
             img {
                 width: 17px; 
                 vertical-align: middle;
@@ -69,7 +73,7 @@
     }
     &-bottom {
         padding-top: 25px;
-        padding-bottom: 21px;
+        padding-bottom: 24px;
         &-inner {
             .flex();
             .form-control {
@@ -196,11 +200,14 @@
                 }
                 .nav-item {
                     margin-left: 27px;
-                    margin-right: 28px;
+                    margin-right: 29.5px;
                     display: inline-block;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    line-height: 24px;
+
                     a {
-                        text-transform: uppercase;
-                        color: #fff;
+                        color: @text-white-color;
                     }
                     &:last-child {
                         margin-right: 0;

@@ -308,6 +308,7 @@
                                 }
     
                                 &-icon {
+                                    max-width: 24px;
                                 }
     
                                 &-content {
@@ -560,25 +561,31 @@
     .slider {
         &-content {
             top: 15%;
+
             &-inner {
                 margin-left: 0px;
+
                 .slide-title {
                     font-size: 23px;
                     line-height: 28px;
                 }
-            }
-            .slide-summary {
-                font-size: 12px;
-                margin-top: 5px;
-                margin-bottom: 5px;
-            }
-            .slide-btn {
-                font-size: 12px;
+                .slide-summary {
+                    // .transformer (translate(-15px,0));
+                    .transformer (translate(0px, -17px));
+                    font-size: 12px;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                }
+                .slide-btn {
+                    font-size: 12px;
+                }
             }
         }
     }
 
     .strength {
+        max-height: none;
+
         &-item {
             width: 100%;
         }
@@ -623,7 +630,7 @@
 
                 &-right {
                     .arrows {
-                        padding: 0 8px;
+                        display: none;
                     }
                 }
             }
@@ -665,12 +672,11 @@
 
     .newsletter {
         .container {
-            .newsetter-inner {
+            .newsletter-inner {
                 .newsletter-email {
                     .newsletter-form {
                         button {
-                            right: 2%;
-                            top: 10%;
+                            display: none;
                         }
                     }
                 }
@@ -697,20 +703,6 @@
         &-top {
             .st-language.in-active {
                 display: none;
-            }
-        }
-    }
-
-    .newsletter {
-        .container {
-            .newsletter-inner {
-                .newsletter-email {
-                    .newsletter-form {
-                        button {
-                            display: none;
-                        }
-                    }
-                }
             }
         }
     }
