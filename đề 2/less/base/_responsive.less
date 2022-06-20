@@ -44,7 +44,7 @@
 
             .row {
                 .top-selling-item {
-                    .col(33.3334%);
+                    .col(25%);
                 }
             }
         }
@@ -72,6 +72,7 @@
 
     .branding {
         max-height: none;
+        height: auto;
     }
 }
 
@@ -294,8 +295,6 @@
                 .row {
         
                     .footer-item {
-
-        
                         .footer-header {
                             font-size: 17px;
                         }
@@ -303,38 +302,9 @@
                         .footer-list {
     
                             &-item {
-    
-                                a {
-                                }
-    
                                 &-icon {
                                     max-width: 24px;
                                 }
-    
-                                &-content {
-                                }
-                            }
-    
-                            .social-media {
-                            }
-                        }
-                    }
-        
-                    .contact-us {
-                    }
-        
-                    .company, .categories {
-    
-                        .footer-list {
-                            &-item {
-                            }
-                        }
-                    }
-        
-                    .quick-links {
-    
-                        .footer-list {
-                            &-item {
                             }
                         }
                     }
@@ -491,6 +461,7 @@
     }
 
     .branding {
+
         &-item {
             .col(33.3334%);
         }
@@ -538,7 +509,7 @@
                 .form-control {
                     .search {
                         form {
-                            .search-sl {
+                            .search-s1 {
                                 display: none;
                             }
                         }
@@ -655,7 +626,7 @@
         
                     &-over {
                         top: 13%;
-                        left: 31%;
+                        left: 24%;
                         font-weight: 600;
                         font-size: 30px;
                     }
@@ -664,6 +635,17 @@
                 .row {
                     .news-item {
                         .col(100%);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        img {
+                            width: 90%;
+                        }
+
+                        &-content {
+                            text-align: center;
+                        }
                     }
                 }
             }
@@ -690,7 +672,7 @@
                 .row {
                     .payments, .designer {
                         .col(50%);
-                        font-size: 10px;
+                        font-size: 12px;
                     }
                 }
             }
@@ -703,6 +685,40 @@
         &-top {
             .st-language.in-active {
                 display: none;
+            }
+        }
+    }
+
+    .slider {
+        &-content {
+            &-inner {
+                .slide-title {
+                    font-size: 16px;
+                    line-height: 28px;
+                }
+                .slide-summary {
+                    // .transformer (translate(-15px,0));
+                    .transformer (translate(0px, -17px));
+                    font-size: 9px;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                }
+                .slide-btn {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .news {
+        &-inner {
+            .container {
+                .news-content {  
+                    &-over {
+                        top: 13%;
+                        left: 22%;
+                    }
+                }
             }
         }
     }

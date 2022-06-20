@@ -42,6 +42,8 @@
 }
 
 .banner {
+    margin-top: 18px;
+
     .banner-col {
         margin: -15px 0;
     }
@@ -119,6 +121,7 @@
                     text-transform: uppercase;
                 }
             }
+
             .title {
                 margin-bottom: -1px;
             }
@@ -173,13 +176,18 @@
 
         .content-top {
             margin-top: -4px;
+
+            .summary {
+                font-size: 17.5px;
+             }
         }
         
         .content-bottom {
             margin-top: -3px;
 
             .summary {
-               margin-top: 4px;
+               margin-top: 6px;
+               font-size: 17.5px;
             }
         }
     }
@@ -231,6 +239,11 @@
                     height: 60%;
                     padding-left: 12px;
                     overflow: hidden;
+
+                    &:hover {
+                        .transformer(scale(1.3));
+                        .transit(all, 0.2s);
+                    }
                 }
             }
         }
@@ -250,6 +263,10 @@
                 img {
                     width: 100%;
                     max-height: 265px;
+                    &:hover {
+                        .transformer(scale(1.1));
+                        .transit(all, 0.2s);
+                    }
                 }
     
                 &-content {
@@ -281,7 +298,7 @@
     overflow: hidden;
 
     &-inner {
-        background-image: url('./img/news background.png');
+        background-image: url('../img/news-background.png');
         width: 100%;
         height: 100%;
         display: flex;
@@ -334,6 +351,11 @@
                         width: 100%;
                         overflow: hidden;
                         max-height: 241px;
+
+                        &:hover {
+                            .transformer(scale(1.1));
+                            .transit(all, 0.2s);
+                        }
                     }
 
                     &-content {
@@ -438,8 +460,10 @@
 
 .branding {
     width: 100%;
-    max-height: 233px;
+    max-height: 195px;
     overflow: hidden;
+    align-items: center;
+    padding: 40px 0;
 
     &-item {
         .col(20%);
@@ -575,6 +599,4 @@
             }
         }
     }
-
-
 }

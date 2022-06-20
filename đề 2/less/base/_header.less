@@ -18,7 +18,7 @@
         display: none;
     }
     &-top {
-        padding: 18px 0;
+        padding: 16px 0;
         box-sizing: border-box;
         background-color: @bg-header;
         font-weight: 500;
@@ -72,7 +72,7 @@
         }
     }
     &-bottom {
-        padding-top: 25px;
+        padding-top: 23px;
         padding-bottom: 24px;
         &-inner {
             .flex();
@@ -91,7 +91,7 @@
                         overflow: hidden;
                         .search-s1 {
                             line-height: 38px;
-                            padding-left: 22px;
+                            padding-left: 18px;
                             padding-right: 35px;
                             select {
                                 height: 24px;
@@ -107,10 +107,13 @@
                         .search-input {
                             flex:1;
                             line-height: 38px;
+                            
                             input {
                                 border: none;
                                 width: 100%;
-                                height: 24px;
+                                height: 100%;
+                                box-sizing: border-box;
+                                padding-top: 4px;
                                 border-left: 1px solid @title-bg-color;
                                 padding-left: 19px;
                             }
